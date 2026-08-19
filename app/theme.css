@@ -1,0 +1,24 @@
+/* Design tokens — Phase 3.1 (Build Checklist)
+   Finalized brand palette, mapped into Tailwind v4's CSS-first `@theme`
+   so every value below becomes a real utility class automatically
+   (bg-primary, text-primary-dark, border-neutral, font-heading, etc).
+   To change the palette or fonts later, this file is the only place
+   that needs to change — components read the utility classes, not the
+   raw hex values. */
+
+@theme {
+  /* Brand blue family */
+  --color-primary: #006eb6; /* main brand blue — buttons, links, key accents */
+  --color-primary-dark: #214491; /* deep navy — headers, footers, high-contrast sections */
+  --color-primary-medium: #4f9acf; /* mid blue — secondary buttons, hover states */
+  --color-primary-light: #a0d4ed; /* pale blue — backgrounds, tags, subtle highlights */
+
+  /* Neutrals */
+  --color-neutral: #949598; /* gray — muted text, borders, dividers */
+  --color-neutral-black: #000000; /* body text / high-contrast text */
+  --color-neutral-white: #ffffff; /* page background */
+
+  /* Fonts — wired up via next/font/google in app/layout.tsx */
+  --font-heading: var(--font-source-serif), Georgia, serif;
+  --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+}
